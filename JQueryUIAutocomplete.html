@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery Auto complete widGet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+</head>
+
+<body>
+    <h2>Auto complete in JQuery UI</h2>
+    <div id="firstdiv" class="divs">
+        <label for="City">Enter you Fav City</label>
+        <input type="text" id="citytextbox">
+    </div>
+</body>
+
+<script src="jquery/jquery-3.5.1.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+<script>
+    var cities = ["Chennai", "Bangalore", "Mumbai", "navi mumbai", "New delhi", "Coimbatore"];
+    $("#citytextbox").autocomplete({
+        source:cities
+    }, {
+        autoFocus:true,
+        delay:0,
+        minLength:3
+
+    });
+    
+</script>
+
+</html>

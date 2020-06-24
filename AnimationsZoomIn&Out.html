@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Animations- Zoom in & Zoom Out</title>
+<script>
+    var width =100;
+    var difference =2;
+    var id =0;
+    function increase(){
+        clearInterval(id);
+         id = setInterval(zoomIn, 5)
+    }
+
+    function decrease(){
+        clearInterval(id);
+         id = setInterval(zoomOut, 5)
+    }
+    function zoomIn(){
+        if(width<200){
+            width = width+difference
+            document.getElementById("img1").width=width
+        }
+         else{
+            clearInterval(id);
+         }
+    }
+    function zoomOut(){
+        if(width>100){
+            width = width-difference
+            document.getElementById("img1").width=width
+        }
+         else{
+            clearInterval(id);
+         }
+    }
+</script>
+<body>
+    <br />
+    <img id="img1" src="heart_PNG51341.png" onmouseover="increase()" onmouseout="decrease()"="imageText" width="100">
+    <br />
+</body>
+</body>
+
+</html>

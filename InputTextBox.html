@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Text Box</title>
+    <script type="text/javascript">
+    function buttonClick() {
+        var h2element = document.getElementById("heading2");
+        if (getUsername() == "Nayeem" && document.getElementById("pass").value== "Nayeem94"){
+            alert("Login is successful");
+            h2element.innerHTML= "Welcome "+ getUsername() + " !!!!";
+        }
+        else  if (getUsername() == "Nayeem" )
+            h2element.innerHTML= "Entered password is incorrect !!!"
+        else 
+        h2element.innerHTML= "Entered username is not Found !!!"
+    }
+    function getUsername(){
+        return document.getElementById("username").value;
+    }
+    </script>
+</head>
+<body>
+    <div>This is example of Input Text Box , Alert and OnClick</div><br>
+    <input id= "username" type =username placeholder = "Enter user name"/><br/><br/>
+    <input id= "pass" type =password placeholder = "Enter passowrd"/>
+    <br/><br/>
+    <button onclick="buttonClick()">Login</button>
+    <h2 id = "heading2">Text Under Heading 2</h2>
+</body>
+</html>

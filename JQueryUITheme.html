@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery Intro UI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+</head>
+
+<body>
+    <div title="calender" id="dateinput"></div>
+        <div id="panels">
+            <h2>JAVA</h2>
+            <p>Java is object oriented language. JDK and JRE are two terms , Java 8 added with features streams,
+                Functional interface
+            </p>
+            <h2>Selenium</h2>
+            <p>Automates the browser actions. It has locator stategy to locate the web Elements</p>
+            <h2>TestNG</h2>
+            <p>Unit Testing Framework- Annotations, dependency methods, priority, ITestResult</p>
+        </div>
+        <div id="messagebox" class="divs" title="messagebox">
+            <p id="p1"> This is the <b>first</b> paragraph in 2nd div</p>
+            <p id="p2"> This is the <b>2nd</b> paragraph in 2nd div</p>
+        </div>
+
+</body>
+<script src="jquery/jquery-3.5.1.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+<script>
+    // $("#dateinput").datepicker();
+    $("#dateinput").datepicker({
+        numberOfMonths: 1,
+        changeYear: true,
+        changeMonth: true,
+        showWeek: true,
+        weekHeader: "Wk No",
+        showOtherMonths: true,
+        minDate: new Date(2020, 4, 30),
+        maxDate: new Date(2020, 6, 1)
+    });
+    $("#panels").accordion({
+        collapsible: true,
+        event: "mouseover",//"click",
+        animate: 2000,
+        active: 2,
+        heightStyle: true,
+        icons: { header: "ui-icon-plus", activeHeader: "ui-icon-minus" }
+    });
+        $("#messagebox").dialog({
+            title: "custom Message Box",
+            draggable: false,
+            resizable: true,
+            modal: true,
+            buttons: [
+                {
+                    text: "Close",
+                    icon: "ui-icon-heart",
+                    click: function () {
+                        $(this).dialog("close")
+                    }
+                },
+                {
+                    text: "Ok",
+                    icon: "ui-icon-star",
+                    click: function () {
+                        $(this).dialog("close")
+                    }
+                }
+            ]
+        });
+</script>
+
+</html>

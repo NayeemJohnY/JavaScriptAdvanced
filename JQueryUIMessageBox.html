@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery Message Box widGet</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+</head>
+
+<body>
+<h2>Message Box in JQuery UI</h2>
+<div id="firstdiv" class ="divs">
+    <p id ="p1"> This is the <b>first</b> paragraph in first div</p>
+    <p id ="p2"> This is the <b>2nd</b> paragraph in first div</p>
+    <button id="btn1">Click to show Message</button>
+</div>
+<div id="messagebox" class="divs" title="messagebox">
+    <p id ="p1"> This is the <b>first</b> paragraph in 2nd div</p>
+    <p id ="p2"> This is the <b>2nd</b> paragraph in 2nd div</p>
+    <button id="btn2">Click Me</button>
+</div>
+</body>
+<script src="jquery/jquery-3.5.1.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+<script>
+    $("#btn1").click(function(){
+        $("#messagebox").dialog({
+            title:"custom Message Box",
+            draggable:false,
+            resizable:true,
+            modal:true,
+            buttons :[
+                {
+                    text: "Close",
+                    icon: "ui-icon-heart",
+                    click : function(){
+                        $(this).dialog("close")
+                    }
+                },
+                {
+                    text:"Ok",
+                    icon: "ui-icon-star",
+                    click : function(){
+                    $(this).dialog("close")
+                    }
+                }
+            ]
+        });
+    }) ;
+</script>
+
+</html>

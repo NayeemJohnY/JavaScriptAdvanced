@@ -1,0 +1,36 @@
+.divs{
+    margin: 5px;
+    padding: 10px;
+    font-family: Cambria;
+    font-style: italic;
+    border:2px solid rebeccapurple;
+}
+
+div p{
+    color: red;
+}
+.cube{
+ width:50px;
+ height: 50px;
+ background-color:violet;
+ opacity: 0.5;
+ padding: 30px;
+ margin: 30px;
+ display: inline-block;
+}
+.cubes{
+    width:50px;
+    height: 50px;
+    background-color:violet;
+    opacity: 0.5;
+    padding: 30px;
+    margin: 30px;
+    display: inline-block;
+   }
+   
+.mydivs{
+    border: 2.5px dotted greenyellow;
+    background-color: aqua;
+    font-size: 20px;
+    border-radius: 10px;
+}

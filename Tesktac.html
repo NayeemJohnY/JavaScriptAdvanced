@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="Abc" style="background-color:grey">
+    <img id="img1" src="logo.jpeg" style="text-align-last: left" alt="Logo text" width=100px/>
+    <a href="signup" id="signup" style="text-align: end;">Sign up</a>
+    <a href="login" id="login" style="text-align:end">Log in</a>
+    <h1 id="">DATAX Shipping Company</h1>
+</div>
+<div style="text-align: center;">
+    <p>Average Shipment Cost Calculation</p>
+    <label for="itemCost">Shipping item cost</label>
+    <textarea type="text" id="itemCost"></textarea>
+    <br/><br/>
+    <button id="calculate" onclick="calculate()">Calculate</button>
+    <br><br/>
+    <label for="result">Average shipment cost</label>
+    <input type="text" id="result">
+</div>
+</body>
+<script>
+    function calculate(){
+        var itemCost = document.getElementById("itemCost");
+        var splitarray = itemCost.value.split(",");
+        var result=0;
+        for(i=0; i<splitarray.length; i++){
+            result += Number(splitarray[i]);
+        }
+        document.getElementById("result").setAttribute("value",result)
+    }
+</script>
+</html> 

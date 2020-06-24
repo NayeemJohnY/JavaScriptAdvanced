@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mobile Number Validations</title>
+    <script>
+        function validate(){
+            var cellphone = document.getElementById("cellphone");
+            var regex = /^[6-9]\d{9}$/; // /^[5-9][a-z]{8}0$
+            if(regex.test(cellphone.value)){
+               
+                document.getElementById("lblNumber").style.visibility="visible"
+                document.getElementById("lblNumber").innerHTML="Valid"
+                document.getElementById("lblNumber").style.color="Green"
+            } else {
+
+                document.getElementById("lblNumber").style.visibility="visible"
+                document.getElementById("lblNumber").innerHTML="InValid"
+                document.getElementById("lblNumber").style.color="Red"
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <input id="cellphone" placeholder="Cellphone" />
+        <label id="lblNumber" style="color: red;visibility: hidden;">InValid</label>
+        <br /><br />
+        <button onclick="validate()" type="button">Submit</button>
+
+    </form>
+</body>
+
+</html>

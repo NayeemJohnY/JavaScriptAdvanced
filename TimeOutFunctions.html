@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Time Out Funcations</title>
+    <script>
+    var id =0;
+    var sec =0;
+        function printMessage() {
+            document.getElementById("output").innerHTML = "5 seconds have passed"
+        }
+        function start(){
+            id = window.setTimeout(printMessage,5000);
+        }
+        function stop(){
+         window.clearTimeout(id);
+        // window.clearInterval(id);
+        }
+        function startInterval(){
+            id = window.setInterval(printSeconds, 1000)
+        }
+        function printSeconds(){
+            document.getElementById("output2").innerHTML = sec + " seconds have passed"
+            sec++;
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <button id="btnStart" onclick="start()" type="button">Start</button>
+        <br />
+        <h2 id="output">Text Area</h2>
+        <br />
+        <button id="btnStop" onclick="stop()" type="button">Stop</button>
+        <br/><br />
+        <button id="btnStartIntetval" onclick="startInterval()" type="button">Start Interval</button>
+        <h2 id="output2">Interval Area</h2>
+
+
+    </form>
+</body>
+
+</html>

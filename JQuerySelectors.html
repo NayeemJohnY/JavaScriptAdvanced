@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery Selectors</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h2 id=heading2>Selectors Understanding</h2>
+    <br />
+    <p> JQuery Selctors Helps to modify the html DOM Elements</p>
+    <p> $(tagName)- select the nodes by the tag Name</p>
+    <p id="para">$(#id)- select the nodes by id </p>
+    <p class="paragraph">$(.className)- select the nodes by className</p>
+    <button id="btn1" onclick="function1()">Click Me</button>
+    <br />
+
+    <div id="firstdiv" class="divs">
+
+        <p> This is the 1st paragraph in first div</p>
+        <p> This is the 2nd paragraph in first div</p>
+
+    </div>
+    <div id="seconddiv" class="divs">
+
+        <p> This is the paragraph in second div</p>
+
+    </div>
+    <div id="thirddiv" class="divs">
+        <ul>
+            <li>This is item 1</li>
+            <li>This is item 2</li>
+            <li>This is item 3</li>
+            <li>This is item 4</li>
+        </ul>
+    </div>
+    <ol>
+        <li>This is item 1</li>
+        <li>This is item 2</li>
+        <li>This is item 3</li>
+        <li>This is item 4</li>
+    </ol>
+    <button id="btn2" onclick="function2()">Click Me</button>
+</body>
+<script src="jquery/jquery-3.5.1.js"></script>
+<script>
+    function function1() {
+        // selectors .actions (tagName #id; .className)
+        // $(h2).action
+        $("p").fadeToggle(1000)
+        $("#para").fadeIn()
+        $(".paragraph").fadeOut()
+    }
+    function function2() {
+        // $(".divs").fadeToggle();
+        // $("#seconddiv,p,li").fadeToggle();
+        // $("div p").fadeToggle()
+        // $("div p:first").fadeToggle()
+        // $("li:even").fadeToggle();
+    }
+</script>
+
+</html>

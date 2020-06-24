@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Regular Expressions</title>
+    <script>
+        function validate(){
+            var username = document.getElementById("username");
+            var regex = /E00/;//i -case  insensitive
+            if(regex.test(username.value)){
+                alert("Valid Username");
+            } else {
+                alert("InValid Username");
+                document.getElementById("lblUser").style.visibility="visible"
+            }
+          var regEx= new RegExp("[a-p]Good", "i") //range [Nay]-set of characters /[a-zA-z]Good/i
+          if(regEx.test(username.value)){
+                document.getElementById("lblUser").innerText="Valid UserName"
+                document.getElementById("lblUser").style.color ="green"
+                document.getElementById("lblUser").style.visibility="visible"
+            } else {
+                alert("InValid Username");
+                document.getElementById("lblUser").style.visibility="visible"
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <input id="username"  type=username placeholder="Username" />
+        <label id="lblUser" style="color: red;visibility: hidden;">InValid username</label>
+        <br /><br />
+        <button onclick="validate()" type="button">Submit</button>
+
+    </form>
+</body>
+
+</html>

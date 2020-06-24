@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Animations- Fade in & Fade Out</title>
+    <script type= "text/javascript"> 
+    var opacity =0;
+    var intervalId =0;
+    function FadeOut(){
+        intervalId = setInterval(hide,50)
+    }
+    function FadeIN(){
+        intervalId = setInterval(show,50)
+    }
+    function hide(){
+        var img1= document.getElementById("img1")
+        opacity = (window.getComputedStyle(img1).getPropertyValue("opacity"));
+        if(opacity>0){
+            opacity = opacity-0.1;
+            img1.style.opacity=opacity
+        }
+       
+        else {
+            clearInterval(intervalId);
+            //FadeIN();
+        }
+    }
+    function show(){
+        var img1= document.getElementById("img1")
+        opacity = Number(window.getComputedStyle(img1).getPropertyValue("opacity"));
+        if(opacity<1){
+            opacity = opacity+0.1;
+            img1.style.opacity=opacity
+        }
+       
+        else {
+            clearInterval(intervalId);
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <form>
+        <button id="btnStart" onclick="FadeOut()" type="button">Fade Out</button>
+        <br />
+        <img id="img1" src="India_Image.png" alt="imageText" width="250px">
+        <br />
+        <button id="btnStop" onclick="FadeIN()" type="button">Fade In</button>
+
+
+    </form>
+</body>
+
+</html>

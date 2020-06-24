@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery DOM Manipulations</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h2>JQuery DOM Manipulations</h2>
+    <button id="btn1">Action</button>
+    <div id="firstdiv" class="divs">
+        <p> This is the <b>first</b> paragraph in first div</p>
+    </div>
+</body>
+<script src="jquery/jquery-3.5.1.js"></script>
+<script>
+
+    $(document).ready(function () {
+        $("#btn1").click(function(){
+            // alert($("#firstdiv").text()); // Retrieve text
+            // $("#firstdiv").text("Hello world!")// change text
+            // alert($("#firstdiv").html()); //html tags also displayed along with text
+            // $("#firstdiv").html("Hello <i>Nayeem</i>??")// set the html 
+            // alert($("#firstdiv").attr("class")); // Retrieve attr
+            // $("#firstdiv").attr("class","mydivs"); //set attributes
+            // $("#firstdiv").attr("value","div tag");
+            // alert($("#firstdiv").attr("value"));
+            // alert($("#firstdiv").css("font-family")); // Retrieve css
+            $("#firstdiv").css("font-family","Cambria").css("font-size","25px").css("background-color","blue")
+        })
+    });
+
+</script>
+
+</html>

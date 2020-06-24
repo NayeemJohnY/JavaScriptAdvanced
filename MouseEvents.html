@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Over & Mouse Out Events</title>
+<script>
+
+function reset(){
+    document.getElementById("image").src ="India_Image.png"
+    document.getElementById("image").width= 300
+}
+
+function setImage(){
+    document.getElementById("image").src= "firefox-icon.png"
+}
+
+
+</script>
+</head>
+<body>
+<img id ="image" src="India_Image.png" alt="Image" onmouseover="setImage()" onmouseout="reset()" width=" 700"/>
+</body>
+</html>

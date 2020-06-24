@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery Selectors</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h2 style="text-align-last: right;" id=heading2>Selectors Understanding</h2>
+    <br />
+    <p> JQuery Selctors Helps to modify the html DOM Elements</p>
+    <p> $(tagName)- select the nodes by the tag Name</p>
+    <p id="para">$(#id)- select the nodes by id </p>
+    <p class="paragraph">$(.className)- select the nodes by className</p>
+    <img id="img1" src="heart_PNG51341.png" alt="heart" width =100>
+    <br />
+    <div id="firstdiv" class="divs">
+        <p> This is the 1st paragraph in first div</p>
+    </div>
+    <div id="seconddiv" class="divs">
+        <p> This is the paragraph in second div</p>
+    </div>
+    <div id="thirddiv" class="divs">
+        <ul>
+            <li>This is item 1</li>
+            <li>This is item 2</li>
+        </ul>
+    </div>
+    <ol>
+        <li>This is item 1</li>
+        <li>This is item 2</li>
+    </ol>
+    <button id="btn1">Hide divs</button>
+    <button id="btn3">Show divs</button>
+    <button id="btn2">Toggle Image</button>
+</body>
+<script src="jquery/jquery-3.5.1.js"></script>
+<script>
+
+    $(document).ready(function() {
+        $("#btn1").click(function(){
+            $(".divs").hide(); //slideup,slidedown slideToggle ; fadein,fadeout,fadeToggle
+        });
+        $("#btn3").click(function(){
+            $(".divs").show();
+        });
+        $("#btn2").click(function(){
+            $("#img1").toggle();
+        });
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery Interactions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+</head>
+
+<body>
+    <h2>Interactions in JQuery UI</h2>
+    <div  id="mydiv_0" style ="border:1px solid black; margin:10px"> draggable
+        <div class="cube">
+            <h3>Cube 1</h3>
+        </div>
+        <div class="cube">
+            <h3>Cube 2</h3>
+        </div>
+        <div class="cube">
+            <h3>Cube 3</h3>
+        </div>
+    </div>
+    <div  id="mydiv_1" style ="border:1px solid black; margin:10px">sortable
+        <div class="cubes">
+            <h3>Cube 1</h3>
+        </div>
+        <div class="cubes">
+            <h3>Cube 2</h3>
+        </div>
+        <div class="cubes">
+            <h3>Cube 3</h3>
+        </div>
+    </div>
+    <div  id="mydiv_2" style ="border:1px solid black; margin:10px">resizable
+        <img id ="image_1" src="heart_PNG51341.png" alt="", width="100px">
+    </div>
+</body>
+
+<script src="jquery/jquery-3.5.1.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+<script>
+$(".cube").draggable({
+    //axis:"y",
+    containment:"parent",//document
+    cursor:"grabbing",
+    opacity:0.1,
+   // grid:[300,300],
+    snap: true,
+    snapTolerance:20
+});
+$("#mydiv_1").sortable({
+    //:"y",
+    containment:"parent",//document
+    cursor:"grabbing",
+    opacity:0.1,
+    distance:30,
+    //delay:300
+
+});
+$("#image_1").resizable({
+    maxWidth:500,
+    maxHeight:500,
+    autoHide:true,
+    ghost:true,
+    aspectRatio:true
+});
+</script>
+
+</html>

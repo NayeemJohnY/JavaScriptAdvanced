@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery Intro UI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css">
+</head>
+
+<body>
+    <div id="mydivs" class="divs">
+        <h2>JQuery Intro UI</h2>
+        <input type="text" id="dateinput">
+        <button id="button">Click me</button>
+    </div>
+   
+
+</body>
+<script src="jquery/jquery-3.5.1.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+<script>
+    // $("#dateinput").datepicker();
+    $("#dateinput").datepicker({
+    numberOfMonths:1,
+    changeYear:true,
+    changeMonth:true,
+    showWeek:true,
+    weekHeader :"Wk No",
+    showOtherMonths:true,
+    minDate: new Date(2020,4,30),
+    maxDate: new Date(2020,6,1)
+    });
+$("#button").click(function(){
+    $("#dateinput").datepicker("option", "numberOfMonths", 2)
+})
+</script>
+
+</html>

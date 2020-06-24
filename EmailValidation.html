@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Email Validations</title>
+    <script>
+        function validate(){
+            var email = document.getElementById("email");
+            var regex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})(.[a-z]{2,8})?$/;
+            if(regex.test(email.value)){
+               
+                document.getElementById("lblEmail").style.visibility="visible"
+                document.getElementById("lblEmail").innerHTML="Valid"
+                document.getElementById("lblEmail").style.color="Green"
+            } else {
+
+                document.getElementById("lblEmail").style.visibility="visible"
+                document.getElementById("lblEmail").innerHTML="InValid"
+                document.getElementById("lblEmail").style.color="Red"
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <input id="email" placeholder="Email" />
+        <label id="lblEmail" style="color: red;visibility: hidden;">InValid</label>
+        <br /><br />
+        <button onclick="validate()" type="button">Submit</button>
+
+    </form>
+</body>
+
+</html>

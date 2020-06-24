@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select (Drop down) Input Examples</title>
+    <script type ="text/javascript">
+ function dropdown(){
+    var browserSelectBox= document.getElementById("browserSelectBox");
+    alert("Select value is "+ browserSelectBox.options[browserSelectBox.selectedIndex].value);
+}
+
+</script>
+</head>
+<body>
+   <select name="BrowserNames" id="browserSelectBox">
+<option value ="chrome">Chrome</option>
+<option value ="firefox">Mozila Firefox</option>
+<option value ="IE">Internet Explorer</option>
+<option value ="edge">Edge</option>
+</select>
+<button onclick="dropdown()">Click Me</button>
+</body>
+</html>

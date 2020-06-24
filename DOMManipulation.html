@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>DOM Manipulation Functions</title>
+<script>
+function changeStyling(){
+ var paragraphElements = document.getElementsByTagName("p");
+ for(i =0 ; i< paragraphElements.length ; i++){
+    paragraphElements[i].style.color = "Brown"
+    paragraphElements[i].style.fontFamily ="Cambria"
+    paragraphElements[i].style.fontSize ="20"
+    paragraphElements[i].style.fontStyle ="Bold"
+ }
+ var paragraphElements = document.getElementsByClassName("paragraph");
+ for(i =0 ; i< paragraphElements.length ; i++){
+    paragraphElements[i].style.color= "Green"
+    paragraphElements[i].style.border= "dotted"
+    paragraphElements[i].style.borderColor= "Black"
+ }
+}
+
+</script>
+</head>
+<body>
+    <p onmouseover="changeStyling()">This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <p>This is paragraph 3</p>
+    <p> This is paragraph 4</p>
+    <p> This is paragraph 5</p>
+
+    <p class= "paragraph">This is paragraph 6</p>
+    <p class= "paragraph">This is paragraph 7</p>
+    <p class= "paragraph"> This is paragraph 8</p>
+</body>
+</html>
